@@ -1,4 +1,5 @@
-<div class="maindiv">
+<form [formGroup]="loginForm" (ngSubmit)="onNext()">
+ <div class="maindiv">
     <div class="subdic">
         <div class="content1" fxLayout="row" fxLayoutAlign="center end"><span style="color:blue;">F</span>
             <span style="color:red;">u</span>
@@ -14,7 +15,8 @@
         <div class="k3" fxLayout="column" fxLayoutAlign="center stretch">
             <mat-form-field class="field1" appearance="outline">
                 <mat-label>Email or phone</mat-label>
-                <input matInput placeholder="">
+                <input matInput placeholder="" formControlName="emailorphone">
+                <mat-error> enter valid email or phone</mat-error>
             </mat-form-field>
         </div>
         <div class="button">
@@ -23,11 +25,12 @@
         <div class="k6" fxLayout="column" fxLayoutAlign="center stretch">
             <mat-form-field class="field1" appearance="outline">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="">
+                <input matInput placeholder="" formControlName="password">
+                <mat-error> enter valid password</mat-error>
             </mat-form-field>
         </div>
         <div class="button1">
-            <button class="box2" mat-button>Forgot password?</button>
+            <button class="box2"  routerLink="/forgotpassword"  mat-button>Forgot password?</button>
         </div>
         <div class="p3">
             <span class="p4">Not your computer?Use Guest mode to sign in privately.</span>
@@ -36,11 +39,11 @@
             <button class="box4" mat-button>Learn more</button>
         </div>
         <div class="p7">
-            <button class="box5" mat-button>Create account</button>
+            <button class="box5" mat-button  routerLink="/registration" >Create account</button>
         </div>
         <div class="p8">
             <button class="box6" mat-button>Next</button>
-
         </div>
     </div>
 </div>
+</form>
