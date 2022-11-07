@@ -13,13 +13,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { GetallNotesComponent } from './getall-notes/getall-notes.component';
+import { ArchiveComponentsComponent } from './archive-components/archive-components.component';
+import { TrashComponentComponent } from './trash-component/trash-component.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    DashboardComponent,
+    GetallNotesComponent,
+    ArchiveComponentsComponent,
+    TrashComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +42,11 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     MatCheckboxModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../service/User_service/user.service';
 
 @Component({
   selector: 'app-resetpassword',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ResetpasswordComponent implements OnInit {
   resetForm !: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private resetUser:UserService) { }
   
 
   ngOnInit(): void {
@@ -22,14 +23,24 @@ export class ResetpasswordComponent implements OnInit {
   onset() {
     this.submitted = true;
     if (this.resetForm.valid) {
-      return;
+      console.log('valid data', this.resetForm.value);
+      console.log('do api call');
+    let lmn= {
+      newPassword: this.resetForm.value.Newpassword,
+      confirmPassword:this.resetForm.value.ConfirmPassword,
+      service: "advance"
     }
-    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value, null, 4));
+    this.resetUser.reset(lmn).subscribe((result:any)=>
+      {
+        console.log(result);
+        
+      })
   }
+  else {
+    console.log('invalid data', this.resetForm.value);
+    console.log('no api call');
 
-  onReset() {
-    this.submitted = false;
-    this.resetForm.reset();
+  }
   }
 
 }

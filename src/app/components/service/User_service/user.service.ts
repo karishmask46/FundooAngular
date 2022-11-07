@@ -37,4 +37,14 @@ export class UserService {
     return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/user/reset',data,false, header)
 
   }
+  reset(data:any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    
+    }
+    return this.http.postservice('http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password',data,false, header)
+
+  }
 }
