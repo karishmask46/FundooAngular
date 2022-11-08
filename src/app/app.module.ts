@@ -13,14 +13,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { GetallNotesComponent } from './getall-notes/getall-notes.component';
-import { ArchiveComponentsComponent } from './archive-components/archive-components.component';
-import { TrashComponentComponent } from './trash-component/trash-component.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GetallNotesComponent } from './components/getall-notes/getall-notes.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { CreateNewComponent } from './components/create-new/create-new.component';
+import { DisplayNoteComponent } from './components/display-note/display-note.component';
+import { IconComponent } from './components/icon/icon.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +33,11 @@ import {MatIconModule} from '@angular/material/icon';
     ResetpasswordComponent,
     DashboardComponent,
     GetallNotesComponent,
-    ArchiveComponentsComponent,
-    TrashComponentComponent
+    ArchiveComponent,
+    TrashComponent,
+    CreateNewComponent,
+    DisplayNoteComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,

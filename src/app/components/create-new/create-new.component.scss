@@ -1,0 +1,57 @@
+.maincontainer{
+    height: 25vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subcontainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.title{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    border: 0px solid red;
+    align-items: center;
+    justify-content: center;
+}
+.title1{
+    height: 70%;
+    width: 90%;
+    font-size: large;
+    border: 0px;
+}
+.descript{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 0px solid red;
+    justify-content: center;
+
+}
+.title2{
+    height: 70%;
+    width: 95%;
+    font-size: small;
+    border: 0px;
+}
+.close{
+    height: 30%;
+    width: 95%;
+    display: flex;
+    border: 0px solid red;
+    justify-content: flex-end;
+    align-items: center;
+}
+.button{
+   border: 0px;
+   background: 0px ;
+   font-size: medium;
+}

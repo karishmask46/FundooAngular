@@ -1,0 +1,24 @@
+.maincontainer{
+    height: 25vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub{
+height: 100%;
+width: 100%;
+display: flex;
+border: 1px solid gainsboro;
+border-radius: 5px;
+flex-direction: column;
+align-items: center;
+}
+.title1{
+    height: 20%;
+    width: 95%;
+    border: 0px;
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+}
