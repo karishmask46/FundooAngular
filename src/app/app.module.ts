@@ -24,6 +24,7 @@ import { TrashComponent } from './components/trash/trash.component';
 import { CreateNewComponent } from './components/create-new/create-new.component';
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { IconComponent } from './components/icon/icon.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { IconComponent } from './components/icon/icon.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

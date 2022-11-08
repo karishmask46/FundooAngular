@@ -4,6 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   box-shadow: 5px 5px 5px gainsboro;
+   position: relative;
+   top: 40px;
+   left: 50px;
 }
 .sub{
 height: 100%;
@@ -14,11 +18,33 @@ border-radius: 5px;
 flex-direction: column;
 align-items: center;
 }
+.sub2{
+    height: 35%;
+    width: 97%;
+    display: flex;
+    border: 0px solid red;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .title1{
-    height: 20%;
+    height: 30%;
     width: 95%;
     border: 0px;
     font-size: 15px;
-    position: relative;
-    top: 10px;
+   
+}
+.title2{
+    height: 30%;
+    width: 95%;
+    border: 0px;
+    font-size: 15px;
+   
+}
+.sub1{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    border: 0px solid red;
+    align-items: flex-end;
+    justify-content: space-evenly;
 }

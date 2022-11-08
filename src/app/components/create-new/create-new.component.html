@@ -1,13 +1,21 @@
-<div class="maincontainer">
-    <div class="subcontainer">
-        <div class="title">
-            <input class="title1" type="text" matInput placeholder="title">
- <img height="30px" width="30px" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg" alt=""></div>
- <div class="descript">
-    <input class="title2" type="text" matInput placeholder="Take a note...">
- </div>
- <div class="close">
-    <button class="button" routerLink="/dashboard/Notes/displaynote">Close</button>
- </div>
-</div>
-</div>
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+<mat-card class="maincontainer" fxLayout="column" fxLayoutAlign="center center">
+         <div class="title" *ngIf="show">
+            <input name="text" class="title1" type="text" placeholder="title" formControlName="title">
+            <img height="30px" width="30px" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+         </div>
+         <div class="descript" *ngIf="show || !show" (click)="isShow()">
+            <input class="title2" type="text" matInput placeholder="Take a note..." formControlName="description">
+            <div class="icons" *ngIf="!show" >
+               <img  height="25px" width="25px" src="../../../assets/check_box_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+               <img height="25px" width="25px" src="../../../assets/brush_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+               <img height="25px" width="25px" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            </div>
+         </div>
+         <div class="close1" *ngIf="show">
+            <app-icon></app-icon>
+            <button class="button" *ngIf="show" (click)="close()">Close</button>
+         </div>
+        
+</mat-card>
+</form>

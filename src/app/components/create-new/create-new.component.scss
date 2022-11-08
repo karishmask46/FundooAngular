@@ -1,31 +1,34 @@
 .maincontainer{
     height: 25vh;
     width: 50vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.subcontainer{
-    height: 100%;
-    width: 100%;
-    display: flex;
     border: 1px solid gainsboro;
-    border-radius: 5px;
-    flex-direction: column;
+    box-shadow: 5px 5px 5px gainsboro;
+    position: relative;
+    left: 250px;
+    top: 20px;
 }
+
 .title{
     height: 30%;
     width: 100%;
     display: flex;
     border: 0px solid red;
-    align-items: center;
-    justify-content: center;
+
 }
 .title1{
-    height: 70%;
-    width: 90%;
-    font-size: large;
-    border: 0px;
+    border: 0px solid gray;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-decoration: center;
+    margin-bottom: 10px;
 }
 .descript{
     height: 30%;
@@ -34,24 +37,43 @@
     align-items: center;
     border: 0px solid red;
     justify-content: center;
-
 }
 .title2{
-    height: 70%;
-    width: 95%;
-    font-size: small;
-    border: 0px;
+    border: 0px solid gray;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-decoration: center;
 }
-.close{
-    height: 30%;
-    width: 95%;
-    display: flex;
-    border: 0px solid red;
-    justify-content: flex-end;
-    align-items: center;
-}
+
 .button{
+    height: 100%;
+    width: 10%;
    border: 0px;
    background: 0px ;
    font-size: medium;
+   border: 0px solid greenyellow; 
+}
+
+.close1{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 0px solid greenyellow;
+}
+.icons{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 0px solid green;   
 }
