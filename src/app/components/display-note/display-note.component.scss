@@ -1,13 +1,24 @@
+.main{
+    height: 120vh;
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 20px;
+    left: 200px;
+}
 .maincontainer{
-    height: 25vh;
-    width: 20vw;
+    height: 15%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
    box-shadow: 5px 5px 5px gainsboro;
-   position: relative;
-   top: 40px;
-   left: 50px;
+   
 }
 .sub{
 height: 100%;

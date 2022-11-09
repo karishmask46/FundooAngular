@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
     }
     this.loginuser.login(abcd).subscribe((result:any)=>
       {
-        console.log(result);
-        
+        console.log(result.id);
+        localStorage.setItem('token',result.id)
       })
   }
   else {

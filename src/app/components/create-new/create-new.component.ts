@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NoteService } from '../noteService/note.service';
 
 @Component({
   selector: 'app-create-new',
@@ -12,7 +13,7 @@ export class CreateNewComponent implements OnInit {
  show=false;
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private note:NoteService) { }
 
   ngOnInit(): void {
     this.createForm=this.formBuilder.group({
@@ -25,15 +26,24 @@ export class CreateNewComponent implements OnInit {
   }
   close():void{
     this.show=false;
-  }
-  onSubmit() {
-    this.submitted = true;
-    if (this.createForm.valid){
-      return;
+    console.log('valid data', this.createForm.value);
+    console.log('note created'); 
+    let abcd={
+      title:this.createForm.value.title,
+      description:this.createForm.value.description
     }
+    this.note.addNotes(abcd).subscribe((result:any)=>{
+         console.log('note',result);      
+    })
   }
-  onReset() {
-    this.submitted = false;
-    this.createForm.reset();
-}
+  // onSubmit() {
+  //   this.submitted = true;
+  //   if (this.createForm.valid){
+  //     return;
+  //   }
+  // }
+//   onReset() {
+//     this.submitted = false;
+//     this.createForm.reset();
+// }
 }
