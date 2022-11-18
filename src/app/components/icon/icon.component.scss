@@ -1,7 +1,38 @@
-.icons{
-    height: 5vh;
-    width: 15vw;
+.OuterDiv{
     display: flex;
-    border: 0px solid gainsboro;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+   
+}
+.add{
+    padding-top: 10px;
+    padding-right: 8px;
+    // border: 10px;
+    margin: 0 5px;
+    .material-symbols-outlined{
+        padding: 10px;
+    }
+    .divImg{
+        display: flex;
+        width: 23px;
+        height: 23px;
+        //padding-left: 20px;
+    }
+}
+    .colour{
+        height: 130px;
+        width: 170px;
+       border: 0px solid blue;
+      display: flex;
+      justify-content: space-around;
+    }
+
+.colors{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+   border: 0px solid red;
+}
+.icons{
+    height: 30px;
 }

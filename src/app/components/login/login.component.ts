@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../service/User_service/user.service';
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { UserService } from '../service/User_service/user.service';
 export class LoginComponent implements OnInit {
   loginForm !: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder,private loginuser:UserService) { }
+  constructor(private formBuilder: FormBuilder,private loginuser:UserService,private router:Router) { }
 
 
 
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
       {
         console.log(result.id);
         localStorage.setItem('token',result.id)
+        this.router.navigateByUrl('/dashboard')
       })
   }
   else {

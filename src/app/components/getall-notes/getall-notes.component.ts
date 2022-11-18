@@ -1,5 +1,7 @@
+import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y/input-modality/input-modality-detector';
 import { Component, OnInit } from '@angular/core';
-import { NoteService } from '../noteService/note.service';
+import { NoteService } from 'src/app/services/note.service';
+
 
 @Component({
   selector: 'app-getall-notes',
@@ -8,6 +10,7 @@ import { NoteService } from '../noteService/note.service';
 })
 export class GetallNotesComponent implements OnInit {
   noteArray:any;
+  getnote:any;
 
   constructor(private note:NoteService) { }
 
@@ -19,10 +22,27 @@ export class GetallNotesComponent implements OnInit {
       console.log(result.data.data);
       this.noteArray=result.data.data;
       this.noteArray=this.noteArray.reverse();
-      
-      console.log(this.noteArray);
-      
+      this.noteArray=this.noteArray.filter((k:any)=>{
+        return k.isArchived==false && k.isDeleted==false;
+      }) 
+      console.log(this.noteArray);     
     })
   }
-
+  autocreatenote(event:any){
+    console.log(event);
+    this.getAllNote();
+  }
+  autodispalay(event:any){
+    console.log(event);
+    
+    this.getAllNote();
+  }
+  autoarchive(event:any){
+    console.log(event);
+    this.getAllNote();
+  }
+  iconrefresh(event:any){
+    console.log(event);
+    this.getAllNote();
+  }
 }

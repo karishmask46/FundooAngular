@@ -25,6 +25,11 @@ import { CreateNewComponent } from './components/create-new/create-new.component
 import { DisplayNoteComponent } from './components/display-note/display-note.component';
 import { IconComponent } from './components/icon/icon.component';
 import {MatCardModule} from '@angular/material/card';
+import { UpdateComponent } from './components/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
+import { AuthenticationGuard } from './components/authentication.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     TrashComponent,
     CreateNewComponent,
     DisplayNoteComponent,
-    IconComponent
+    IconComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +60,12 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    FormsModule,
+    MatMenuModule,
   ],
-  providers: [],
+  providers: [AuthenticationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

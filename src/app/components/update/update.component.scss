@@ -1,0 +1,38 @@
+.maindiv{
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0px solid gray;
+}
+.subdiv{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border: 0px solid gray;
+    font-size: larger;
+}
+.note1{
+    border: 0px solid gray;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    display: flex;
+    text-decoration: center;
+}
+.note2{
+    border: 0px solid gray;
+    outline: none;
+    box-sizing: border-box;
+    resize: none;
+    background: 0px;
+    font-size: medium;
+
+}
+.note3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

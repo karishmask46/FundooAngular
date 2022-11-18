@@ -1,4 +1,7 @@
+import { outputAst } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { NoteService } from 'src/app/services/note.service';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-trash',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trash.component.scss']
 })
 export class TrashComponent implements OnInit {
-
-  constructor() { }
-
+ trashlist:any;
+  constructor(private note:NoteService) { }
   ngOnInit(): void {
+    this.trash()
   }
+  trash(){
+    this.note.getNotes().subscribe((result:any)=>{
+      this.trashlist=result.data.data;
+      this.trashlist=this.trashlist.filter((k:any)=>{
+        return k.isDeleted== true;
+      })
+      console.log(this.trashlist);
+      
+    })
+  }
+   receivemessage($event:any){
+    console.log($event);
+    this.trash();
+   }
 
 }
